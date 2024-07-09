@@ -31,6 +31,9 @@ app.get("*", (req, res) => {
     err: "there is an error :)",
   });
 });
+app.get("/", (req, res) => {
+  res.send(`<h1> heading </h1>`);
+});
 
 app.listen(port, () => {
   console.log(`The server was started on ${port} port.`);
