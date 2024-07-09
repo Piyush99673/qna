@@ -26,13 +26,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(errorHandler);
 
-// app.get("*", (req, res) => {
-//   res.status(404).json({
-//     err: "there is an error :)",
-//   });
-// });
 app.get("/", (req, res) => {
-  res.send(`<h1> heading </h1>`);
+  res.send(`<h1> Welcome to the Nielsen  </h1>`);
 });
 
 app.listen(port, () => {
