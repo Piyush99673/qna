@@ -1,5 +1,5 @@
 import express from "express";
-// import { getAccessToRoute } from "../middlewares/auth.middleware.js";
+import { getAccessToRoute } from "../middlewares/auth.middleware.js";
 import {
   register,
   login,

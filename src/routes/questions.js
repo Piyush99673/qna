@@ -1,6 +1,6 @@
 import express from "express";
 import {
-  //   getAccessToRoute,
+  getAccessToRoute,
   getQuestionOwnerAccess,
 } from "../middlewares/auth.middleware.js";
 import { checkQuesitonExist } from "../helpers/db/db.error.helpers.js";
@@ -10,6 +10,8 @@ import {
   addQuestion,
   updateQuestion,
   deleteQuestion,
+  favQuestion,
+  unFavQuestion,
 } from "../controllers/quesitons.controller.js";
 import answer from "../routes/answer.js";
 
@@ -29,8 +31,8 @@ router.delete(
   [checkQuesitonExist, getQuestionOwnerAccess],
   deleteQuestion
 );
-// router.get("/favQuestion/:id", checkQuesitonExist, favQuestion);
-// router.get("/unFavQuestion/:id", checkQuesitonExist, unFavQuestion);
+router.get("/favQuestion/:id", checkQuesitonExist, favQuestion);
+router.get("/unFavQuestion/:id", checkQuesitonExist, unFavQuestion);
 router.use("/:id/answers", checkQuesitonExist, answer);
 
 export default router;
