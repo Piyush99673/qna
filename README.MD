@@ -1,4 +1,9 @@
-# 💻 Nielsen Question and Answer Rest API
+# 💻 Stack Overflow Rest API
+
+## 📁 Description
+Hello everyone! This is my third back-end project in software development. The project was written in node.js and with MongoDB Database.
+I learned mongodb crud operations, jsonwebtoken, authentications,image upload, postman usage,error handling, rest api, password encryption and send mail this project.
+
 
 ## 🚀 Getting started
 
@@ -8,15 +13,14 @@ To get the Node server running locally:
 - `npm install` to install all required dependencies
 - Create MongoDb Cluster and Get Connection MongoDb URI
 - Set environment variables in `config.env` under `./config/env`
-
-  - Set `PORT = <YOUR_PORT>`
-  - Set `MONGO_URI = <YOUR_MONGO_URI>`
-  - Set `JWT_SECRET_KEY = <YOUR_SECRET_KEY>`
-  - Set `JWT_EXPIRE = <YOUR_JWT_EXPIRE_TIME>`
-  - Set `SMTP_HOST=<YOUR_SMTP_HOST>`
-  - Set `SMTP_PORT=<SMTP_PORT>`
-  - Set `SMTP_EMAIL=<YOUR_GMAIL_EMAIL>`
-  - Set `SMTP_PASS=<YOUR_GMAIL_PASSWORD>`
+  * Set `PORT = <YOUR_PORT>`
+  * Set `MONGO_URI = <YOUR_MONGO_URI>`
+  * Set `JWT_SECRET_KEY = <YOUR_SECRET_KEY>`
+  * Set `JWT_EXPIRE = <YOUR_JWT_EXPIRE_TIME>`
+  * Set `SMTP_HOST=<YOUR_SMTP_HOST>`
+  * Set `SMTP_PORT=<SMTP_PORT>`
+  * Set `SMTP_EMAIL=<YOUR_GMAIL_EMAIL>`
+  * Set `SMTP_PASS=<YOUR_GMAIL_PASSWORD>`
 
 - `npm start` to start the local server
 
@@ -26,12 +30,13 @@ To get the Node server running locally:
 
 - [expressjs](https://github.com/expressjs/express) - The server for handling and routing HTTP requests
 - [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken) - For generating JWTs used by authentication
-- [mongoose](https://github.com/Automattic/mongoose) - For modeling and mapping MongoDB data to JavaScript
+- [mongoose](https://github.com/Automattic/mongoose) - For modeling and mapping MongoDB data to JavaScript 
 - [slugify](https://github.com/simov/slugify) - For encoding titles into a URL-friendly format
 - [bcryptjs](https://github.com/dodo/node-slug) - Hashing Password
 - [dotenv](https://github.com/motdotla/dotenv) - Zero-Dependency module that loads environment variables
 - [multer](https://github.com/expressjs/multer) - Node.js middleware for uploading files
 - [nodemailer](https://github.com/nodemailer/nodemailer) - Send e-mails from Node.js
+
 
 ## 👨🏻‍💻 Application Structure
 
@@ -50,6 +55,6 @@ In `middlewares/errors/errorHandler.js`, we define a error-handling middleware f
 
 ## 🔐 Authentication
 
-Requests are authenticated using the `Authorization` header and value `Bearer: {{token}}`. with a valid JWT.
+Requests are authenticated using the `Authorization` header and value `Bearer: {{token}}`. with a valid JWT. 
 
 We define express middlewares in `middlewares/authorization/auth.js` that can be used to authenticate requests. The `required` middlewares returns `401` or `403`.
